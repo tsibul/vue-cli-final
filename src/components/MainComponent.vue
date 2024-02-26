@@ -6,7 +6,7 @@
     </div>
     <CounterComponent/>
     <div class="container">
-      <NewsComponent/>
+      <NewsComponent :articles="articleList"/>
     </div>
   </div>
 </template>
@@ -17,6 +17,7 @@ import ProjectsComponent from '@/components/main/ProjectsComponent.vue'
 import CounterComponent from '@/components/main/CounterComponent.vue'
 import NewsComponent from '@/components/main/NewsComponent.vue'
 import projectsData from '@/components/main/projectsData'
+import articleList from '@/components/articles/articles'
 
 export default {
   name: 'MainComponent',
@@ -27,7 +28,7 @@ export default {
     BannerComponent
   },
   data () {
-    return { projectsData }
+    return { projectsData, articleList }
   },
   props: {
     msg: String

@@ -55,7 +55,7 @@ export default {
   &__left{
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     width: 393px;
     gap: 26px;
 
@@ -64,14 +64,14 @@ export default {
     display: flex;
     flex-direction: column;
     gap: 26px;
-    align-items: start;
+    align-items: flex-start;
     width: 122px;
   }
   &__right{
     display: flex;
     flex-direction: column;
     gap: 26px;
-    align-items: start;
+    align-items: flex-start;
     width: 256px;
   }
 
@@ -96,14 +96,14 @@ export default {
   &__social{
     display: flex;
     gap: 54px;
-    justify-content: start;
+    justify-content: flex-start;
   }
 }
 
 .menu {
   &__left {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     gap: 10px;
     align-items: center;
     cursor: pointer;

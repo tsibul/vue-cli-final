@@ -39,7 +39,7 @@ export default {
 
   &__left {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     gap: 10px;
     align-items: center;
     cursor: pointer;

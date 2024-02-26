@@ -32,7 +32,7 @@ export default {
   height: 758px;
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   position: relative;
   z-index: 2;
   background-color: #fff;
@@ -42,7 +42,7 @@ export default {
     padding-left: 72px;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     gap: 20px;
     width: 506px;
 

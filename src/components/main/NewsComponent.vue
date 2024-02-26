@@ -7,15 +7,22 @@
       </div>
     </div>
     <div class="news__articles">
+      <ArticleComponent v-for="(article, index) in articles.slice(1, 4)"
+                        :key="index"
+                        :article="article"
+      />
     </div>
   </section>
 </template>
 
 <script>
+import ArticleComponent from '@/components/articles/ArticleComponent.vue'
+
 export default {
   name: 'NewsComponent',
+  components: { ArticleComponent },
   props: {
-    msg: String
+    articles: Array
   }
 }
 </script>
@@ -59,6 +66,8 @@ export default {
     margin-top: 60px;
     display: grid;
     grid-template-columns: repeat(3, 382px);
+    grid-template-rows: 1fr;
+    overflow: hidden;
     justify-content: space-between;
   }
 }

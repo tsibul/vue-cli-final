@@ -40,7 +40,7 @@ export default {
 
   &__info {
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     flex-direction: column;
   }
 
