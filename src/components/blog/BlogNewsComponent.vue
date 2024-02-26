@@ -55,8 +55,8 @@ export default {
   &__articles {
     margin-top: 60px;
     display: grid;
+    row-gap: 30px;
     grid-template-columns: repeat(3, 382px);
-    grid-template-rows: 1fr;
     overflow: hidden;
     justify-content: space-between;
 
