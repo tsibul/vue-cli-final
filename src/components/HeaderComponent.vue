@@ -2,7 +2,7 @@
   <div class="container">
     <header class="menu">
       <menu class="menu__left" @click="changeContent('MainComponent')">
-        <img src="@/assets/icons/Logo.png" height="34">
+        <img src="@/assets/icons/Logo.png" height="34" alt="Logo">
         <div class="menu__title">Interno</div>
       </menu>
       <menu class="menu__right">
