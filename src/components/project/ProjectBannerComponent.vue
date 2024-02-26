@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'BlogBannerComponent',
+  name: 'ProjectBannerComponent',
   props: {
     msg: String
   }

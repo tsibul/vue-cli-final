@@ -10,7 +10,7 @@
       />
     </div>
     <div class="news__articles_footer">
-      <img src="@/assets/image/Pagination.png" alt="pgin">
+      <img src="../../assets/image/Pagination.png" alt="pgin">
     </div>
 
   </section>
@@ -20,7 +20,7 @@
 import ArticleComponent from '@/components/articles/ArticleComponent.vue'
 
 export default {
-  name: 'BlogNewsComponent',
+  name: 'ProjectNewsComponent',
   components: { ArticleComponent },
   props: {
     articles: Array
