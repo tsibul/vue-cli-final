@@ -30,8 +30,8 @@ export default {
   padding: 21px;
   border: 1px solid #F4F0EC;
   border-radius: 60px;
-  //height: 521px;
   position: relative;
+  transition: background-color 0.2s, color 0.2s;
 
   &:hover {
     background-color: #F4F0EC;
