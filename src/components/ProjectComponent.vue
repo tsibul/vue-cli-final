@@ -1,24 +1,32 @@
 <template>
   <div>
+    <BlogBannerComponent />
     <div class="container">
-      <ProjectsComponent/>
+      <LatestPostComponent/>
     </div>
-    <CounterComponent/>
     <div class="container">
+      <BlogNewsComponent :articles="articleList"/>
     </div>
   </div>
 </template>
 
 <script>
-import ProjectsComponent from '@/components/main/ProjectsComponent.vue'
-import CounterComponent from '@/components/main/CounterComponent.vue'
+import BlogBannerComponent from '@/components/blog/BlogBannerComponent.vue'
+import LatestPostComponent from '@/components/blog/LatestPostComponent.vue'
+import BlogNewsComponent from '@/components/blog/BlogNewsComponent.vue'
+import articleList from '@/components/articles/articles'
 
 export default {
   name: 'MainComponent',
   components: {
-    CounterComponent,
-    ProjectsComponent
+    BlogNewsComponent,
+    LatestPostComponent,
+    BlogBannerComponent
   },
+  data () {
+    return { articleList }
+  },
+
   props: {
     msg: String
   }
