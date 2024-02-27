@@ -1,27 +1,30 @@
 <template>
   <div class="details-layout">
-    <CurrentPostComponent :article-id="articleId"/>  </div>
+    <CurrentPostComponent :article-id="articleId" />
+     <BlogDetailsComponent/>
+  </div>
 </template>
 
 <script>
 import CurrentPostComponent from '@/components/blog/CurrentPostComponent.vue'
+import BlogDetailsComponent from '@/components/blog/BlogDetailsComponent.vue'
 
 export default {
   name: 'BlogLayoutComponent',
-  components: {
-    CurrentPostComponent
-  },
   data () {
     return {
       articleId: 6
     }
+  },
+  components: {
+    BlogDetailsComponent,
+    CurrentPostComponent
   },
   methods: {
     changeContent (id) {
       this.articleId = id
     }
   }
-
 }
 </script>
 
