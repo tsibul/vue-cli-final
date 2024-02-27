@@ -33,7 +33,6 @@ export default {
     }
   }
 }
-
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -77,6 +76,7 @@ export default {
   border: 1px solid transparent;
   border-radius: 10px;
   transition: background-color 0.2s, color 0.2s;
+  cursor: pointer;
 
   &:hover {
     color: #fff;
