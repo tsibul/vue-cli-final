@@ -11,7 +11,7 @@
 export default {
   name: 'BlogSingleTagComponent',
   props: {
-    tag: Object
+    tag: String
   },
   components: {}
 }
@@ -36,6 +36,7 @@ export default {
   border: 1px solid transparent;
   border-radius: 10px;
   transition: background-color 0.2s, color 0.2s;
+  cursor: pointer;
 
   &:hover {
     color: #fff;
