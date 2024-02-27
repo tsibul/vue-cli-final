@@ -40,7 +40,7 @@ export default {
   display: flex;
   height: 612px;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
 
   &__title {
     @include title;
