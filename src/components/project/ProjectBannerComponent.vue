@@ -30,7 +30,7 @@ export default {
   background-size: 100% 100%;
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
 
   &__intro {
     background-color: #fff;
