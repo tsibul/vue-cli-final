@@ -14,15 +14,15 @@ import articleList from '@/components/articles/articles'
 export default {
   name: 'BlogArticlesComponent',
   props: {
-    tag: String
+    selectedTag: String
   },
   components: { ArticleComponent },
   computed: {
-    tagFilterArticles: function (tag) {
-      if (tag === 'All') {
+    tagFilterArticles: function () {
+      if (this.selectedTag === 'All') {
         return articleList
       } else {
-        return Array.from(articleList.filter(a => a.tag === tag))
+        return Array.from(articleList.filter(a => a.tag === this.selectedTag))
       }
     }
   }

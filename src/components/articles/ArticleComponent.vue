@@ -30,8 +30,8 @@ export default {
   padding: 21px;
   border: 1px solid #F4F0EC;
   border-radius: 60px;
-  position: relative;
   transition: background-color 0.2s, color 0.2s;
+  position: relative;
 
   &:hover {
     background-color: #F4F0EC;
@@ -86,8 +86,8 @@ export default {
     font-size: 16px;
     line-height: 24px;
     position: absolute;
-    left: 44px;
-    top: 252px;
+    left: 40px;
+    top: calc((100% - 22px) *0.483 + 8px);
   }
 
 }
