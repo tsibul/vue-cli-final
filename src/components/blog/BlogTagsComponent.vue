@@ -2,11 +2,11 @@
   <div>
     <div class="details-tags__title">Tags</div>
     <div class="details-tags__btns">
-      <span class="tags-span">
+      <span class="tags-span" @click="selectAll">
         <input type="radio" name="tags" checked id="tags-all" class="details-tags__btns_check">
         <label for="tags-all" class="tags-btn">All</label>
       </span>
-      <BlogSingleTagComponent v-for="tag in tagList.tags" :key="tag.id" :tag="tag"/>
+      <BlogSingleTagComponent v-for="tag in tagList.tags" :key="tag.id" :tag="tag" @chosenTag="choseTag"/>
     </div>
   </div>
 </template>
@@ -18,13 +18,13 @@ import BlogSingleTagComponent from '@/components/blog/BlogSingleTagComponent.vue
 
 export default {
   name: 'BlogTagsComponent',
-  props: {
-    tags: Array
-  },
   components: { BlogSingleTagComponent },
   methods: {
-    showAll () {
-      return { tagId: 0 }
+    choseTag (tag) {
+      this.$emit('chosenTag', tag)
+    },
+    selectAll () {
+      this.$emit('chosenTag', 'All')
     }
   },
   computed: {

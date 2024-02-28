@@ -1,7 +1,7 @@
 <template>
   <section class="details_blog">
-    <BlogTagsComponent/>
-    <BlogArticlesComponent/>
+    <BlogTagsComponent @chosenTag="changeTag" />
+    <BlogArticlesComponent :selectedTag="selectedTag" />
   </section>
 </template>
 
@@ -12,9 +12,18 @@ import BlogArticlesComponent from '@/components/blog/BlogArticlesComponent.vue'
 
 export default {
   name: 'BlogDetailsComponent',
+  data () {
+    return { selectedTag: 'All' }
+  },
   components: {
     BlogArticlesComponent,
     BlogTagsComponent
+  },
+  methods: {
+    changeTag (selectedTag) {
+      this.selectedTag = selectedTag
+      console.log(selectedTag)
+    }
   }
 }
 </script>

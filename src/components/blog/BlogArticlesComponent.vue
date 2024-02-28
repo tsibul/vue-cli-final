@@ -1,13 +1,31 @@
 <template>
   <section class="details_blog">
+    <ArticleComponent v-for="(article, index) in tagFilterArticles"
+                      :key="index"
+                      :article="article"/>
   </section>
 </template>
 
 <script>
 
+import ArticleComponent from '@/components/articles/ArticleComponent.vue'
+import articleList from '@/components/articles/articles'
+
 export default {
   name: 'BlogArticlesComponent',
-  components: {}
+  props: {
+    tag: String
+  },
+  components: { ArticleComponent },
+  computed: {
+    tagFilterArticles: function (tag) {
+      if (tag === 'All') {
+        return articleList
+      } else {
+        return Array.from(articleList.filter(a => a.tag === tag))
+      }
+    }
+  }
 }
 </script>
 

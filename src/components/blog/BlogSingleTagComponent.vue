@@ -1,5 +1,5 @@
 <template>
-<span class="tags-span">
+<span class="tags-span" @click="emitTag">
   <input type="radio" name="tags" :id="'tags-'+ tag.replace(' ', '_')"
          class="tags-btn__check">
   <label :for="'tags-'+ tag.replace(' ', '_')" class="tags-btn">{{ tag }}</label>
@@ -12,6 +12,11 @@ export default {
   name: 'BlogSingleTagComponent',
   props: {
     tag: String
+  },
+  methods: {
+    emitTag () {
+      this.$emit('chosenTag', this.tag)
+    }
   },
   components: {}
 }
